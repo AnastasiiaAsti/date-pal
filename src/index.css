@@ -134,3 +134,49 @@ body {
     display: none;
   }
 }
+
+@media only screen and (max-height: 741px) {
+  .btn {
+    width: 100px;
+    height: 100px;
+  }
+
+  .shape-2 {
+    z-index: 10;
+  }
+}
+
+@media only screen and (max-height: 650px) {
+  .btn {
+    width: 90px;
+    height: 90px;
+    left: 20%;
+    top: 50px;
+  }
+
+  .thing .one {
+    left: 20%;
+    top: 32%;
+  }
+
+  .thing .two {
+    left: 20%;
+    top: 23%
+  }
+
+  .thing .three {
+    left: 20%
+  }
+
+  .thing .four {
+    left: 20%;
+  }
+
+  .thing .five {
+    left: 20%;
+  }
+
+
+
+
+}
