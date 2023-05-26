@@ -1,0 +1,19 @@
+.shape-2 {
+    clip-path: circle(48.8% at 100% 50%);
+    background-color: var(--yellow);
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    right: 0;
+    top: 100px;
+    color: #000000;
+    display: flex;
+    align-items: center;
+
+}
+
+.shape-2 p {
+    z-index: 2;
+    position: absolute;
+    right: 5px;
+}

@@ -5,6 +5,12 @@ import areas from './data/areas';
 import cocktails from './data/cocktails';
 import movies from './data/movies';
 import outfits from './data/outfits';
+import Logo from './components/Logo/Logo';
+import ShapeOne from './components/ShapeOne/ShapeOne';
+import ShapeTwo from './components/ShapeTwo/ShapeTwo';
+import ShapeFour from './components/ShapeFour/ShapeFour';
+import ShapeFive from './components/ShapeFive/ShapeFive';
+import LittleStar from './components/LittleStar/LittleStar';
 
 function App() {
   const [randomActivity, setRandomActivity] = useState(null);
@@ -46,19 +52,12 @@ const handleRandomSelectionActivity = () => {
   };
 
   return (
-    <div className="App">
-        <p className='logo'>Date Pal</p>
-      <div className='logo-shape'>
-      <p className='logo'>Date Pal</p>
-      </div>
-      <div className="shape-1">
-        <p>Hey! Need an inspiration<br></br> for your day?</p> 
-      </div>
-      <div className="shape-2">
-        <p>press <br></br>the star<br></br> button</p>
-      </div>
+    <div className="App" scroll="no">
+      <Logo />
+      <ShapeOne />
+      <ShapeTwo />
       <div className="shape-3">
-        <button
+        <div
           onClick={() => {
             handleRandomSelectionActivity()
             handleRandomSelectionArea()
@@ -66,19 +65,26 @@ const handleRandomSelectionActivity = () => {
             handleRandomSelectionMovie()
             handleRandomSelectionOutfit()
           }}
-          className='btn'>GENERATE</button>
+          className='btn'>
+            <div className="eyes">
+              <div className="eye"></div>
+              <div className="eye"></div>
+              </div>
+              <div className="mouth"></div>
+        </div>
+        
       </div>
-      <div className="shape-4"></div>
+      <LittleStar/>
+      <ShapeFour/>
       <div className="thing">
+      <LittleStar/>
         <p className='one'>Activity: <span>{randomActivity}</span> </p>
         <p className='two'>Area: <span>{randomArea}</span></p>
         <p className='three'>Cocktail: <span>{randomCocktail}</span> </p>
         <p className='four'>Movie: <span>{randomMovie}</span> </p>
         <p className='five'>Outfit: <span>{randomOutfit}</span></p>
       </div>
-      <div className="shape-5">
-        <p>created by <br></br>asticodes.dev</p>
-      </div>
+    <ShapeFive/>
   </div> 
 
   );

@@ -1,0 +1,20 @@
+.shape-5 {
+    clip-path: polygon(11% 2%, 32% 6%, 48% 24%, 54% 54%, 28% 93%, 0 100%, 0 78%, 0 11%);
+    background-color: var(--light-blue);
+    width: 300px;
+    height: 300px;
+    color: #000000;
+    position: absolute;
+    left: 0;
+    bottom: 215px;
+}
+
+.shape-5 p {
+    z-index: 1;
+    position: absolute;
+    bottom: 215px;
+    left: 10px;
+    z-index: 6;
+    font-size: 10px;
+    color: #000000;
+}

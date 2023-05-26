@@ -1,0 +1,10 @@
+.star {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    bottom: 5%;
+    left: 10%;
+    transform: rotate(25deg);
+    background-color: var(--pink);
+    clip-path: polygon(50% 0%, 70% 29%, 98% 35%, 81% 63%, 79% 91%, 50% 80%, 21% 91%, 18% 58%, 2% 35%, 30% 28%);
+}

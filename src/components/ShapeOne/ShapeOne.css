@@ -1,0 +1,17 @@
+.shape-1 {
+    clip-path: polygon(51% 0, 100% 0, 100% 33%, 100% 70%, 100% 86%, 72% 94%, 46% 84%, 29% 70%, 16% 38%, 29% 14%);
+    background-color: var(--green);
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #000000;
+    overflow-y: hidden;
+}
+
+.shape-1 p {
+    text-align: start;
+    margin-top: 40px;
+    margin-left: 90px;
+}
