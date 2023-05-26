@@ -5,7 +5,7 @@
     height: 180px;
     position: absolute;
     right: 0;
-    top: 60px;
+    top: 65px;
     color: #000000;
     display: flex;
     align-items: center;
@@ -16,4 +16,5 @@
     z-index: 2;
     position: absolute;
     right: 5px;
+    top: 40px;
 }
