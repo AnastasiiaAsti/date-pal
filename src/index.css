@@ -25,17 +25,18 @@ body {
 }
 
 .btn {
-  width: 180px;
-  height: 180px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   border: none;
   position: absolute;
-  top: 150px;
-  left: 40px;
+  top: 100px;
+  left: 70px;
   background-color: var(--pink);
   clip-path: polygon(50% 0%, 70% 29%, 98% 35%, 81% 63%, 79% 91%, 50% 80%, 21% 91%, 18% 58%, 2% 35%, 30% 28%);
   animation: heartbeat 4.5s infinite;
   transform: rotate(20deg);
+  z-index: 10;
 }
 
 
