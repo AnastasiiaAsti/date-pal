@@ -137,7 +137,49 @@ body {
 }
 
 .thing {
-  color: #ffffff;
+  background-color: var(--peach);
+  color: #000000;
+  width: 800px;
+  height: 900px;
+  position: absolute;
+  bottom: -210px;
+  clip-path: polygon(50% 0%, 80% 10%, 100% 35%, 96% 65%, 80% 90%, 55% 95%, 20% 90%, 0% 70%, 0% 35%, 18% 15%);
+}
+
+
+.thing .one {
+  position: absolute;
+  top: 20%;
+  left: 15%;
+  width: 45%;
+}
+
+.thing .two {
+  position: absolute;
+  top: 30%;
+  left: 15%;
+  width: 45%;
+}
+
+.thing .three {
+  position: absolute;
+  top: 40%;
+  left: 15%;
+  width: 45%;
+}
+
+.thing .four {
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  width: 45%;
+}
+
+.thing .five {
+  position: absolute;
+  top: 60%;
+  left: 15%;
+  width: 45%;
 }
 
 @media only screen and (min-width: 450px) {}

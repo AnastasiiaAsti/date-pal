@@ -1,14 +1,18 @@
 import './App.css';
 import { useState } from 'react';
 import activities from "./data/activities";
-// import areas from './data/areas';
-// import cocktails from './data/cocktails';
-// import movies from './data/movies';
-// import outfits from './data/outfits';
+import areas from './data/areas';
+import cocktails from './data/cocktails';
+import movies from './data/movies';
+import outfits from './data/outfits';
 
 function App() {
   const [randomActivity, setRandomActivity] = useState(null);
-  // let generatedIdea = []
+  const [randomArea, setRandomArea] = useState(null)
+  const [randomCocktail, setRandomCocktail] = useState(null)
+  const [randomMovie, setRandomMovie] = useState(null)
+  const [randomOutfit, setRandomOutfit] = useState(null)
+
 
   
 const handleRandomSelectionActivity = () => {
@@ -16,7 +20,30 @@ const handleRandomSelectionActivity = () => {
   const selectedElement = activities[randomIndex];
   setRandomActivity(selectedElement);
 };
+  
+  const handleRandomSelectionArea = () => {
+    const randomIndex = Math.floor(Math.random() * areas.length);
+    const selectedElement = areas[randomIndex];
+    setRandomArea(selectedElement);
+  };
 
+  const handleRandomSelectionCocktail = () => {
+    const randomIndex = Math.floor(Math.random() * cocktails.length);
+    const selectedElement = cocktails[randomIndex];
+    setRandomCocktail(selectedElement);
+  };
+
+  const handleRandomSelectionMovie= () => {
+    const randomIndex = Math.floor(Math.random() * movies.length);
+    const selectedElement = movies[randomIndex];
+    setRandomMovie(selectedElement);
+  };
+
+  const handleRandomSelectionOutfit = () => {
+    const randomIndex = Math.floor(Math.random() * outfits.length);
+    const selectedElement = outfits[randomIndex];
+    setRandomOutfit(selectedElement);
+  };
 
   return (
     <div className="App">
@@ -31,7 +58,15 @@ const handleRandomSelectionActivity = () => {
         <p>press <br></br>the button</p>
       </div>
       <div className="shape-3">
-        <button onClick={handleRandomSelectionActivity} className='btn'>GENERATE</button>
+        <button
+          onClick={() => {
+            handleRandomSelectionActivity()
+            handleRandomSelectionArea()
+            handleRandomSelectionCocktail()
+            handleRandomSelectionMovie()
+            handleRandomSelectionOutfit()
+          }}
+          className='btn'>GENERATE</button>
       </div>
       <div className="shape-4">
         <div className="arrow">
@@ -40,7 +75,11 @@ const handleRandomSelectionActivity = () => {
             </div>
       </div>
       <div className="thing">
-      <p>Activity: {randomActivity}</p>
+        <p className='one'>Activity: {randomActivity}</p>
+        <p className='two'>Area: {randomArea}</p>
+        <p className='three'>Cocktail: {randomCocktail}</p>
+        <p className='four'>Movie: {randomMovie}</p>
+        <p className='five'>Outfit: {randomOutfit}</p>
       </div>
   </div> 
 
