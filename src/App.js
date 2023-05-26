@@ -55,7 +55,7 @@ const handleRandomSelectionActivity = () => {
         <p>Hey! Need an inspiration<br></br> for your day?</p> 
       </div>
       <div className="shape-2">
-        <p>press <br></br>the button</p>
+        <p>press <br></br>the star<br></br> button</p>
       </div>
       <div className="shape-3">
         <button
@@ -68,18 +68,16 @@ const handleRandomSelectionActivity = () => {
           }}
           className='btn'>GENERATE</button>
       </div>
-      <div className="shape-4">
-        <div className="arrow">
-        <div className="curve"></div>
-        <div className="point"></div>
-            </div>
-      </div>
+      <div className="shape-4"></div>
       <div className="thing">
-        <p className='one'>Activity: {randomActivity}</p>
-        <p className='two'>Area: {randomArea}</p>
-        <p className='three'>Cocktail: {randomCocktail}</p>
-        <p className='four'>Movie: {randomMovie}</p>
-        <p className='five'>Outfit: {randomOutfit}</p>
+        <p className='one'>Activity: <span>{randomActivity}</span> </p>
+        <p className='two'>Area: <span>{randomArea}</span></p>
+        <p className='three'>Cocktail: <span>{randomCocktail}</span> </p>
+        <p className='four'>Movie: <span>{randomMovie}</span> </p>
+        <p className='five'>Outfit: <span>{randomOutfit}</span></p>
+      </div>
+      <div className="shape-5">
+        <p>created by <br></br>asticodes.dev</p>
       </div>
   </div> 
 

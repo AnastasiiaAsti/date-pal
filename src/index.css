@@ -18,6 +18,15 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.App {
+  max-width: 100%;
+  max-height: 100%;
+  overflow: hidden;
 }
 
 .logo-shape {
@@ -44,11 +53,13 @@ body {
   height: 250px;
   position: absolute;
   top: -60px;
-  right: -35px;
+  right: -85px;
   color: #000000;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+
 }
 
 .shape-1 p {
@@ -61,11 +72,12 @@ body {
   width: 180px;
   height: 180px;
   position: absolute;
-  right: -50px;
+  right: -100px;
   top: 100px;
   color: #000000;
   display: flex;
   align-items: center;
+  overflow: hidden;
 }
 
 .shape-2 p {
@@ -73,67 +85,52 @@ body {
 }
 
 .btn {
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   border: none;
   position: absolute;
-  top: 220px;
-  left: 10px;
+  top: 150px;
+  left: 100px;
   background-color: var(--pink);
+  clip-path: polygon(50% 0%, 65% 30%, 98% 35%, 73% 58%, 79% 91%, 50% 74%, 21% 91%, 26% 58%, 2% 35%, 31% 33%);
+
 }
 
 .shape-4 {
+  background-color: var(--yellow);
+  width: 350px;
+  height: 200px;
   position: absolute;
-  top: -78px;
-  left: 90px;
-  transform: rotate(40deg);
+  top: -40px;
+  left: -180px;
+  clip-path: polygon(52% 18%, 86% 18%, 100% 35%, 96% 65%, 80% 79%, 55% 92%, 20% 90%, 0% 70%, 0% 35%, 20% 25%);
+  z-index: -2;
+  overflow: hidden;
+
 }
 
-.arrow {
-  position: relative;
-  margin: 0 auto;
-  width: 100px;
-}
-
-.arrow .curve {
-  border: 2px solid var(--blue);
-  border-color: transparent transparent transparent var(--blue);
-  height: 360px;
-  width: 1200px;
-  border-radius: 230px 0 0 150px;
-}
-
-.arrow .point {
+.shape-5 {
+  clip-path: polygon(54% 8%, 80% 10%, 96% 26%, 100% 70%, 80% 90%, 51% 96%, 20% 90%, 0% 70%, 9% 39%, 25% 15%);
+  background-color: var(--light-blue);
+  width: 300px;
+  height: 300px;
+  color: #000000;
   position: absolute;
-  left: 40px;
-  top: 315px;
+  left: -150px;
+  bottom: 190px;
+  overflow: hidden;
+
 }
 
-.arrow .point:before,
-.arrow .point:after {
-  border: 1px solid var(--blue);
-  height: 25px;
-  content: "";
+.shape-5 p {
+  z-index: 1;
   position: absolute;
-}
-
-.arrow .point:before {
-  top: -11px;
-  left: -11px;
-  transform: rotate(-74deg);
-  -webkit-transform: rotate(-74deg);
-  -moz-transform: rotate(-74deg);
-  -ms-transform: rotate(-74deg);
-}
-
-.arrow .point:after {
-  top: -20px;
-  left: 5px;
-  transform: rotate(12deg);
-  -webkit-transform: rotate(12deg);
-  -moz-transform: rotate(12deg);
-  -ms-transform: rotate(12deg);
+  bottom: 50%;
+  left: 55%;
+  z-index: 6;
+  font-size: 10px;
+  color: #000000;
 }
 
 .thing {
@@ -142,44 +139,63 @@ body {
   width: 800px;
   height: 900px;
   position: absolute;
-  bottom: -210px;
+  bottom: -410px;
+  z-index: 3;
+  overflow: hidden;
   clip-path: polygon(50% 0%, 80% 10%, 100% 35%, 96% 65%, 80% 90%, 55% 95%, 20% 90%, 0% 70%, 0% 35%, 18% 15%);
 }
 
+.thing span {
+  color: #ffffff;
+  text-transform: uppercase;
+}
 
 .thing .one {
   position: absolute;
   top: 20%;
   left: 15%;
-  width: 45%;
+  width: 40%;
+  text-transform: lowercase;
 }
 
 .thing .two {
   position: absolute;
   top: 30%;
   left: 15%;
-  width: 45%;
+  width: 40%;
+  text-transform: lowercase;
+
 }
 
 .thing .three {
   position: absolute;
   top: 40%;
   left: 15%;
-  width: 45%;
+  width: 40%;
+  text-transform: lowercase;
+
 }
 
 .thing .four {
   position: absolute;
   top: 50%;
   left: 15%;
-  width: 45%;
+  width: 40%;
+  text-transform: lowercase;
+
 }
 
 .thing .five {
   position: absolute;
   top: 60%;
   left: 15%;
-  width: 45%;
+  width: 40%;
+  text-transform: lowercase;
+
 }
 
-@media only screen and (min-width: 450px) {}
+@media only screen and (min-width: 400px) {
+  body {
+    display: none;
+  }
+}
