@@ -1,5 +1,18 @@
+:root {
+  --orange: #f6824c;
+  --blue: #2971f6;
+  --yellow: #fef151;
+  --pink: #fdacff;
+  --green: #7deda3;
+  --light-blue: #a3e9ff;
+  --peach: #ff7777;
+  --black: #000000;
+}
+
 body {
   margin: 0;
+  background-color: var(--black);
+  color: #ffffff;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -7,7 +20,124 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.logo-shape {
+  background-color: var(--peach);
+  clip-path: circle(50% at 50% 50%);
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  z-index: -1;
 }
+
+.logo {
+  color: #000000;
+  padding: 5px;
+  font-size: 20px;
+}
+
+.shape-1 {
+  clip-path: polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%);
+  background-color: var(--green);
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  top: -60px;
+  right: -35px;
+  color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shape-1 p {
+  margin-right: 20px;
+}
+
+.shape-2 {
+  clip-path: circle(50% at 50% 50%);
+  background-color: var(--yellow);
+  width: 180px;
+  height: 180px;
+  position: absolute;
+  right: -50px;
+  top: 100px;
+  color: #000000;
+  display: flex;
+  align-items: center;
+}
+
+.shape-2 p {
+  margin-left: 20px;
+}
+
+.btn {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: none;
+  position: absolute;
+  top: 220px;
+  left: 10px;
+  background-color: var(--pink);
+}
+
+.shape-4 {
+  position: absolute;
+  top: -78px;
+  left: 90px;
+  transform: rotate(40deg);
+}
+
+.arrow {
+  position: relative;
+  margin: 0 auto;
+  width: 100px;
+}
+
+.arrow .curve {
+  border: 2px solid var(--blue);
+  border-color: transparent transparent transparent var(--blue);
+  height: 360px;
+  width: 1200px;
+  border-radius: 230px 0 0 150px;
+}
+
+.arrow .point {
+  position: absolute;
+  left: 40px;
+  top: 315px;
+}
+
+.arrow .point:before,
+.arrow .point:after {
+  border: 1px solid var(--blue);
+  height: 25px;
+  content: "";
+  position: absolute;
+}
+
+.arrow .point:before {
+  top: -11px;
+  left: -11px;
+  transform: rotate(-74deg);
+  -webkit-transform: rotate(-74deg);
+  -moz-transform: rotate(-74deg);
+  -ms-transform: rotate(-74deg);
+}
+
+.arrow .point:after {
+  top: -20px;
+  left: 5px;
+  transform: rotate(12deg);
+  -webkit-transform: rotate(12deg);
+  -moz-transform: rotate(12deg);
+  -ms-transform: rotate(12deg);
+}
+
+.thing {
+  color: #ffffff;
+}
+
+@media only screen and (min-width: 450px) {}
